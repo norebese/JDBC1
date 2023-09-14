@@ -1,0 +1,6 @@
+#properties test
+#Fri Sep 08 15:22:58 KST 2023
+driver=oracle.jdbc.driver.OracleDriver
+URI=jdbc:oracle:thin:@localhost:1521:xe","JDBC","JDBC
+username=JDBC
+password=JDBC

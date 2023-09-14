@@ -1,0 +1,65 @@
+package com.kh.controller;
+
+import java.util.ArrayList;
+
+import com.kh.model.dao.MemberDao;
+import com.kh.model.service.MemberService;
+import com.kh.model.vo.Member;
+import com.kh.view.MemberMenu;
+
+//Controller : View를 통해서 사용자가 요청한 기능에 대해서 처리하는 담당
+//				해당 메서드로 전달된 데이터 [가공처리후] dao로 전달하며 호출
+//				dao로부터 반환받은 결과에 따라서 성공인지 실패인지 판단 후 응답화면 결정(View 메서드 호출)
+public class MemberController {
+	
+	/**
+	 * 사용자의 추가요청을 처리해주는 메소드
+	 * @param userId ~ hobby : 사용자가 입력했던 정보들이 담겨있는 매개변수
+	 */
+
+	public void insertMember(String userId, String userPwd, String userName, String gender, 
+					String age, String email, String phone, String address, String hobby) {
+		
+		Member m = new Member(userId,userPwd,userName,gender,Integer.parseInt(age),email,phone,address,hobby);
+				
+		int result = new MemberService().insertMember(m);
+		
+		if(result >0) {
+			new MemberMenu().displaySuccess("성공적으로 회원이 추가되었습니다");
+		}else {
+			new MemberMenu().displayFail("회원추가 실패");
+		}
+		
+		
+	}
+	
+	public void selectList() {
+
+	}
+
+	/**
+	 * 사용자의 아이디로 회원 검색 요청을 처리해주는 메소드
+	 * @param userId : 사용자가 입력한 검색하고자하는 회원 아이디
+	 */
+	public void selectByUserId(String userId) {
+	
+	}
+
+	/**
+	 * 이름으로 키워드 검색 요청시 처리해주는 메소드
+	 * @param keyword : 사용자가 입력한 검색할 키워드명
+	 */
+	public void selectByUserName(String keyword) {
+	  
+	   }
+	
+	public void updateMember(String userId, String userPwd,
+			String email, String phone, String address) {
+	
+	}
+
+	public void deleteMember(String userId) {
+	
+
+}
+}

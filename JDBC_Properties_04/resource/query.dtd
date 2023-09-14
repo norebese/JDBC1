@@ -1,0 +1,3 @@
+<!ELEMENT properties (entry+)>
+<!ELEMENT entry (#PCDATA)>
+<!ATTLIST entry key NMTOKEN #REQUIRED>

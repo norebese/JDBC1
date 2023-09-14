@@ -1,0 +1,32 @@
+package com.kh.model.service;
+
+import java.sql.Connection;
+
+import com.kh.common.JDBCTemplate;
+import com.kh.model.dao.MemberDao;
+import com.kh.model.vo.Member;
+
+public class MemberService {
+	// 1) JDBC driver 등록
+	// 2) Connection 객체 생성
+	// 3) Connection 객체 처리
+	
+	public int inserMember (Member m) {
+		
+		Connection conn = JDBCTemplate.getConnection();
+		int result = new MemberDao().insertMember(conn, m);
+		
+		if(result > 0) {
+			JDBCTemplate.commit(conn);
+		}else {
+			JDBCTemplate.rollback(conn);
+		}
+		
+		return result;
+		
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,19 @@
+package test;
+
+public class time {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a =0;
+		while(true) {
+			a++;
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}
