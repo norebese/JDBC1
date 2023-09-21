@@ -1,6 +1,0 @@
-#properties test
-#Fri Sep 08 15:22:58 KST 2023
-R=SELECT
-C=INSERT
-D=DELETE
-U=UPDATE
