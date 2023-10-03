@@ -1,6 +1,7 @@
 package gameController;
 
 import Member.Member;
+import MemberService.MemberService;
 import gameMenu.gameMenu;
 
 public class gameController {

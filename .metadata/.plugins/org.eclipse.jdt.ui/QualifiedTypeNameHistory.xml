@@ -20,4 +20,8 @@
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="MemberService.MemberService"/>
+    <fullyQualifiedTypeName name="Member.Member"/>
+    <fullyQualifiedTypeName name="JDBCTemplate.JDBCTemplate"/>
+    <fullyQualifiedTypeName name="MemberDao.MemberDao"/>
 </qualifiedTypeNameHistroy>
